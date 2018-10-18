@@ -13,7 +13,7 @@ def main
 end
 
 def get(url)
-  RestClinet.get(url)
+  RestClient.get(url)
 end
 
 def modify(css)
@@ -27,3 +27,5 @@ def save(name, css)
   Dir.mkdir(PUBLISH_DIR)
   File.write(path, css)
 end
+
+main if $0 == __FILE__
