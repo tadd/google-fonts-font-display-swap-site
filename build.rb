@@ -1,7 +1,7 @@
 require 'rest-client'
 
 BASE = -'https://fonts.googleapis.com/css?family='
-FAMLIY = -ENV.fetch('FAMLIY')
+FAMILY = -ENV.fetch('FAMILY')
 PUBLISH_DIR = -'public'
 CSS_FILE_NAME = -'google-fonts.css'
 INJECTATE = -'font-display: swap;'
