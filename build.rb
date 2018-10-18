@@ -5,6 +5,10 @@ FAMILY = -ENV.fetch('FAMILY')
 PUBLISH_DIR = -'public'
 CSS_FILE_NAME = -'google-fonts.css'
 INJECTATE = -'font-display: swap;'
+REQUEST_HEADERS = {
+  'Upgrade-Insecure-Requests' => '1',
+  'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' #  Chromium 69
+}.freeze
 
 def main
   css = get(BASE + FAMILY)
@@ -13,7 +17,7 @@ def main
 end
 
 def get(url)
-  RestClient.get(url)
+  RestClient.get(url, REQUEST_HEADERS)
 end
 
 def modify(css)
