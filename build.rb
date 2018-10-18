@@ -22,7 +22,8 @@ def modify(css)
   css
 end
 
-def save(css, name)
+def save(name, css)
   path = PUBLISH_DIR + '/' + CSS_FILE_NAME
+  Dir.mkdir(PUBLISH_DIR)
   File.write(path, css)
 end
