@@ -1,3 +1,13 @@
+DEPRECATED
+==========
+
+The issue google/fonts#358 was closed because now we can use
+`display=swap` parameter of Google Fonts API.
+https://developers.google.com/fonts/docs/getting_started#use_font-display
+
+We're all happy, my repos is now deprecated and archived.
+Thank you Google guys!
+
 Google Fonts `font-display: swap;` site
 =======================================
 
